@@ -1,70 +1,119 @@
-# Getting Started with Create React App
+# TicSheets Website
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+A stunning one-page scroll website for the TicSheets productivity app, built with React.js and featuring Nothing OS inspired design with smooth animations and mobile responsiveness.
 
-## Available Scripts
+## 🚀 Features
 
-In the project directory, you can run:
+- **One-page scroll design** with smooth animations
+- **Nothing OS inspired theme** with geometric precision and minimalist design
+- **Fully responsive** for mobile, tablet, and desktop
+- **Framer Motion animations** for engaging user experience
+- **Appwrite integration** for wishlist functionality
+- **Modern React.js** without TypeScript or Tailwind CSS
 
-### `npm start`
+## 🛠 Setup Instructions
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+### 1. Install Dependencies
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+```bash
+cd ticsheets-website
+npm install
+```
 
-### `npm test`
+### 2. Configure Appwrite
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+1. Create an account at [Appwrite Cloud](https://cloud.appwrite.io)
+2. Create a new project
+3. Create a database and collection for the wishlist
+4. Update the `.env` file with your Appwrite credentials:
 
-### `npm run build`
+```env
+REACT_APP_APPWRITE_ENDPOINT=https://cloud.appwrite.io/v1
+REACT_APP_APPWRITE_PROJECT_ID=your_project_id_here
+REACT_APP_APPWRITE_DATABASE_ID=your_database_id_here
+REACT_APP_APPWRITE_COLLECTION_ID=your_collection_id_here
+```
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+### 3. Collection Schema
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+Create a collection in Appwrite with the following attributes:
+- `name` (String, required)
+- `email` (Email, required)
+- `country` (String, required)
+- `timestamp` (DateTime, required)
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+### 4. Run the Development Server
 
-### `npm run eject`
+```bash
+npm start
+```
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+The website will be available at `http://localhost:3000`
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+### 5. Build for Production
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+```bash
+npm run build
+```
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+## 📱 Sections
 
-## Learn More
+1. **Header** - Fixed navigation with smooth scroll
+2. **Hero** - Eye-catching introduction with animated elements
+3. **Features** - Comprehensive feature showcase
+4. **Screenshots** - Interactive app preview
+5. **Tech Stack** - Technical architecture overview
+6. **Wishlist** - Appwrite-powered signup form
+7. **Footer** - Links and additional information
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+## 🎨 Design System
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+### Color Palette
+- Primary Background: `#0A0A0A` (Deep Black)
+- Text Primary: `#FFFFFF` (Pure White)
+- Accent Orange: `#FF6600` (Brand Color)
+- Transparent overlays with subtle white borders
 
-### Code Splitting
+### Typography
+- Headers: Bold, UPPERCASE, Letter-spaced
+- Body: Regular with subtle letter-spacing
+- Monospace for technical elements
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+### Animations
+- Framer Motion for smooth transitions
+- Intersection Observer for scroll-triggered animations
+- Hover effects and micro-interactions
 
-### Analyzing the Bundle Size
+## 📦 Dependencies
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+- `react` - UI library
+- `framer-motion` - Animation library
+- `react-intersection-observer` - Scroll-triggered animations
+- `appwrite` - Backend services for wishlist
 
-### Making a Progressive Web App
+## 🌐 Browser Support
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+- Chrome (latest)
+- Firefox (latest)
+- Safari (latest)
+- Edge (latest)
+- Mobile browsers
 
-### Advanced Configuration
+## 📱 Mobile Responsiveness
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+The website is fully responsive with breakpoints at:
+- Desktop: 1200px+
+- Tablet: 768px - 1199px
+- Mobile: 320px - 767px
 
-### Deployment
+## 🚀 Deployment
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+The website can be deployed to any static hosting service:
+- Netlify
+- Vercel
+- GitHub Pages
+- AWS S3 + CloudFront
 
-### `npm run build` fails to minify
+## 📄 License
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+This project is created for the TicSheets productivity app showcase.
