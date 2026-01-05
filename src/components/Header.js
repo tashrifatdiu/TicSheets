@@ -37,7 +37,7 @@ const Header = () => {
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
           >
-            <span className="logo-text">TicSheets</span>
+            <img src="/bannerlogo.png" alt="TicSheets" className="logo-image" />
             <span className="logo-version">v1.5.1</span>
           </motion.div>
 

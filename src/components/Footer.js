@@ -39,7 +39,7 @@ const Footer = () => {
                 className="footer-logo"
                 whileHover={{ scale: 1.05 }}
               >
-                <span className="logo-text">TicSheets</span>
+                <img src="/bannerlogo.png" alt="TicSheets" className="footer-logo-image" />
                 <span className="logo-version">v1.5.1</span>
               </motion.div>
               <p className="footer-description">

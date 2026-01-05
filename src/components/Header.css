@@ -46,13 +46,10 @@
   cursor: pointer;
 }
 
-.logo-text {
-  font-size: 1.8rem;
-  font-weight: bold;
-  text-transform: uppercase;
-  letter-spacing: 2px;
-  color: #FF6600;
-  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+.logo-image {
+  height: 50px;
+  width: auto;
+  object-fit: contain;
 }
 
 .logo-version {
@@ -88,8 +85,8 @@
 }
 
 .nav-link:hover {
-  color: #FF6600;
-  text-shadow: 0 0 10px rgba(255, 102, 0, 0.5);
+  color: #8f1eae;
+  text-shadow: 0 0 10px rgba(143, 30, 174, 0.5);
   transform: translateY(-1px);
 }
 
@@ -100,7 +97,7 @@
   left: 0;
   width: 0;
   height: 3px;
-  background: linear-gradient(90deg, #FF6600, rgba(255, 102, 0, 0.5));
+  background: linear-gradient(90deg, #8f1eae, rgba(143, 30, 174, 0.5));
   transition: width 0.3s ease;
 }
 
@@ -179,7 +176,7 @@
     padding: 15px 0;
   }
 
-  .logo-text {
-    font-size: 1.5rem;
+  .logo-image {
+    height: 42px;
   }
 }

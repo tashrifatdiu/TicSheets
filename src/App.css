@@ -80,12 +80,12 @@ section {
 }
 
 .btn-primary {
-  border-color: #FF6600;
-  color: #FF6600;
+  border-color: #8f1eae;
+  color: #8f1eae;
 }
 
 .btn-primary:hover {
-  background: #FF6600;
+  background: #8f1eae;
   color: #FFFFFF;
 }
 
