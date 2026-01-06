@@ -151,6 +151,7 @@
     visibility: hidden;
     transition: all 0.3s ease;
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.8);
+    z-index: 999;
   }
 
   .nav-open {

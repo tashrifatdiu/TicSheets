@@ -1,6 +1,9 @@
 .features {
   background: linear-gradient(135deg, rgba(143, 30, 174, 0.02) 0%, rgba(10, 10, 10, 1) 100%);
   position: relative;
+  min-height: auto;
+  padding: 80px 0;
+  z-index: 1;
 }
 
 .features::before {
@@ -32,7 +35,7 @@
 
 .features-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   gap: 30px;
   margin-bottom: 80px;
 }
@@ -191,9 +194,14 @@
 }
 
 @media (max-width: 768px) {
+  .features {
+    padding: 60px 0;
+  }
+  
   .features-grid {
     grid-template-columns: 1fr;
     gap: 20px;
+    margin-bottom: 60px;
   }
   
   .feature-card {
@@ -212,15 +220,26 @@
   .highlight-content h3 {
     font-size: 1.5rem;
   }
+  
+  .features-header {
+    margin-bottom: 60px;
+  }
 }
 
 @media (max-width: 480px) {
+  .features {
+    padding: 40px 0;
+  }
+  
   .features-grid {
     grid-template-columns: 1fr;
+    gap: 15px;
+    margin-bottom: 40px;
   }
   
   .design-principles {
     grid-template-columns: 1fr;
+    gap: 15px;
   }
   
   .feature-card {
@@ -229,5 +248,17 @@
   
   .features-highlight {
     padding: 25px 15px;
+  }
+  
+  .features-header {
+    margin-bottom: 40px;
+  }
+  
+  .features-header h2 {
+    font-size: 1.8rem;
+  }
+  
+  .features-header p {
+    font-size: 1rem;
   }
 }

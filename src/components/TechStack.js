@@ -5,7 +5,7 @@ import './TechStack.css';
 
 const TechStack = () => {
   const [ref, inView] = useInView({
-    threshold: 0.2,
+    threshold: 0.1,
     triggerOnce: true
   });
 

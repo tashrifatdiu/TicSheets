@@ -57,6 +57,11 @@ section {
   position: relative;
 }
 
+/* Add top padding to account for fixed header */
+section:first-of-type {
+  padding-top: 120px;
+}
+
 /* Buttons */
 .btn {
   display: inline-block;
@@ -194,6 +199,10 @@ section {
     padding: 60px 0;
   }
   
+  section:first-of-type {
+    padding-top: 100px;
+  }
+  
   .container {
     padding: 0 15px;
   }
@@ -222,5 +231,9 @@ section {
   
   section {
     padding: 40px 0;
+  }
+  
+  section:first-of-type {
+    padding-top: 80px;
   }
 }
