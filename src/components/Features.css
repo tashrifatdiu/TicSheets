@@ -202,14 +202,26 @@
     grid-template-columns: 1fr;
     gap: 20px;
     margin-bottom: 60px;
+    opacity: 1 !important;
+    visibility: visible !important;
   }
   
   .feature-card {
     padding: 30px 20px;
+    opacity: 1 !important;
+    transform: none !important;
   }
   
   .features-highlight {
     padding: 30px 20px;
+    opacity: 1 !important;
+    transform: none !important;
+  }
+  
+  .features-header {
+    margin-bottom: 60px;
+    opacity: 1 !important;
+    transform: none !important;
   }
   
   .design-principles {
@@ -219,10 +231,6 @@
   
   .highlight-content h3 {
     font-size: 1.5rem;
-  }
-  
-  .features-header {
-    margin-bottom: 60px;
   }
 }
 

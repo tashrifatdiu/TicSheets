@@ -6,7 +6,7 @@ import './TechStack.css';
 const TechStack = () => {
   const [ref, inView] = useInView({
     threshold: 0.1,
-    triggerOnce: true
+    triggerOnce: false
   });
 
   const techCategories = [
@@ -83,7 +83,7 @@ const TechStack = () => {
         <motion.div 
           className="tech-header"
           initial={{ opacity: 0, y: 30 }}
-          animate={inView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
+          animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
         >
           <h2>Built for Excellence</h2>
@@ -94,7 +94,7 @@ const TechStack = () => {
           className="tech-stats"
           variants={containerVariants}
           initial="hidden"
-          animate={inView ? "visible" : "hidden"}
+          animate="visible"
         >
           {stats.map((stat, index) => (
             <motion.div 
@@ -116,7 +116,7 @@ const TechStack = () => {
           className="tech-categories"
           variants={containerVariants}
           initial="hidden"
-          animate={inView ? "visible" : "hidden"}
+          animate="visible"
         >
           {techCategories.map((category, categoryIndex) => (
             <motion.div 
@@ -150,7 +150,7 @@ const TechStack = () => {
         <motion.div 
           className="tech-highlight"
           initial={{ opacity: 0, scale: 0.9 }}
-          animate={inView ? { opacity: 1, scale: 1 } : { opacity: 0, scale: 0.9 }}
+          animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.8, delay: 0.6 }}
         >
           <div className="highlight-content">

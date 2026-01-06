@@ -5,8 +5,8 @@ import './Features.css';
 
 const Features = () => {
   const [ref, inView] = useInView({
-    threshold: 0.2,
-    triggerOnce: true
+    threshold: 0.1,
+    triggerOnce: false
   });
 
   const features = [
@@ -76,7 +76,7 @@ const Features = () => {
         <motion.div 
           className="features-header"
           initial={{ opacity: 0, y: 30 }}
-          animate={inView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
+          animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
         >
           <h2>Powerful Features</h2>
@@ -87,7 +87,7 @@ const Features = () => {
           className="features-grid"
           variants={containerVariants}
           initial="hidden"
-          animate={inView ? "visible" : "hidden"}
+          animate="visible"
         >
           {features.map((feature, index) => (
             <motion.div 
@@ -121,7 +121,7 @@ const Features = () => {
         <motion.div 
           className="features-highlight"
           initial={{ opacity: 0, scale: 0.9 }}
-          animate={inView ? { opacity: 1, scale: 1 } : { opacity: 0, scale: 0.9 }}
+          animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.8, delay: 0.5 }}
         >
           <div className="highlight-content">
