@@ -11,6 +11,30 @@ const Screenshots = () => {
 
   const screenshots = [
     {
+      title: 'AI Task Creation - Activate Button',
+      description: 'One-tap AI activation button right beside "Add New Task". Simply tap to start voice or text commands for instant task creation.',
+      image: '/images/newaifeature(activate_ai_button).jpeg',
+      isAI: true
+    },
+    {
+      title: 'AI Voice Command Interface',
+      description: 'Speak naturally to create tasks. The AI understands your voice commands and converts them into organized tasks automatically.',
+      image: '/images/newaifeatures(audio_command_button_for_adding_tasks).jpeg',
+      isAI: true
+    },
+    {
+      title: 'AI Text Command Interface',
+      description: 'Type your tasks in natural language. The AI interprets your text and creates properly formatted tasks with all details.',
+      image: '/images/newaifeatures(text_command_button_for_adding_tasks).jpeg.jpeg',
+      isAI: true
+    },
+    {
+      title: 'AI Auto-Generated Tasks',
+      description: 'Watch as AI automatically creates and organizes tasks based on your voice or text commands. Smart, fast, and accurate.',
+      image: '/images/newaifeature(ai_adding_tasks_automatically_after_audio-text_.commands).jpeg',
+      isAI: true
+    },
+    {
       title: 'Dashboard & Activity Calendar',
       description: 'Clean dashboard with GitHub-style contribution calendar showing your productivity patterns and task completion streaks.',
       image: '/images/dashboardandactivitycalendar.jpeg'
@@ -93,8 +117,12 @@ const Screenshots = () => {
           animate={inView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
           transition={{ duration: 0.8 }}
         >
+          <div className="ai-screenshots-badge">
+            <span className="ai-badge-icon">🤖</span>
+            <span>NEW AI Features Included</span>
+          </div>
           <h2>App Screenshots</h2>
-          <p>Explore the beautiful, minimalist interface inspired by Nothing OS design philosophy.</p>
+          <p>Explore the beautiful, minimalist interface inspired by Nothing OS design philosophy. Now featuring AI-powered voice and text task creation!</p>
         </motion.div>
 
         <motion.div 
@@ -107,10 +135,11 @@ const Screenshots = () => {
             {screenshots.map((screenshot, index) => (
               <motion.div 
                 key={index}
-                className="screenshot-item"
+                className={`screenshot-item ${screenshot.isAI ? 'ai-screenshot-item' : ''}`}
                 variants={itemVariants}
               >
-                <div className="phone-mockup">
+                {screenshot.isAI && <div className="ai-screenshot-badge">🤖 AI</div>}
+                <div className={`phone-mockup ${screenshot.isAI ? 'ai-phone-mockup' : ''}`}>
                   <div className="phone-frame">
                     <div className="phone-notch"></div>
                     <div className="phone-screen">
@@ -123,7 +152,7 @@ const Screenshots = () => {
                   </div>
                 </div>
                 <div className="screenshot-info">
-                  <h3>{screenshot.title}</h3>
+                  <h3>{screenshot.isAI && <span className="ai-title-icon">🤖 </span>}{screenshot.title}</h3>
                   <p>{screenshot.description}</p>
                 </div>
               </motion.div>
@@ -137,8 +166,12 @@ const Screenshots = () => {
           animate={inView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
           transition={{ duration: 0.8, delay: 0.6 }}
         >
+          <div className="stat-item ai-stat-item">
+            <span className="stat-number">🤖 AI</span>
+            <span className="stat-label">Voice & Text Commands</span>
+          </div>
           <div className="stat-item">
-            <span className="stat-number">10+</span>
+            <span className="stat-number">14+</span>
             <span className="stat-label">App Screens</span>
           </div>
           <div className="stat-item">

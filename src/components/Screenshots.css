@@ -29,6 +29,119 @@
   color: rgba(255, 255, 255, 0.7);
 }
 
+/* AI Screenshots Badge */
+.ai-screenshots-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  background: linear-gradient(135deg, rgba(143, 30, 174, 0.3), rgba(143, 30, 174, 0.1));
+  border: 2px solid rgba(143, 30, 174, 0.6);
+  padding: 10px 25px;
+  margin-bottom: 20px;
+  animation: aiBadgeGlow 2s ease-in-out infinite;
+}
+
+@keyframes aiBadgeGlow {
+  0%, 100% {
+    box-shadow: 0 0 15px rgba(143, 30, 174, 0.3);
+  }
+  50% {
+    box-shadow: 0 0 30px rgba(143, 30, 174, 0.5);
+  }
+}
+
+.ai-badge-icon {
+  font-size: 1.5rem;
+}
+
+.ai-screenshots-badge span:last-child {
+  color: #FFFFFF;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-size: 14px;
+}
+
+/* AI Screenshot Item Styles */
+.ai-screenshot-item {
+  position: relative;
+}
+
+.ai-screenshot-badge {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: linear-gradient(135deg, #8f1eae, rgba(143, 30, 174, 0.8));
+  color: #FFFFFF;
+  padding: 5px 12px;
+  font-size: 12px;
+  font-weight: bold;
+  z-index: 10;
+  animation: aiBadgePulse 2s ease-in-out infinite;
+}
+
+@keyframes aiBadgePulse {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.05); }
+}
+
+.ai-phone-mockup .phone-frame {
+  border-color: rgba(143, 30, 174, 0.5) !important;
+  box-shadow: 
+    0 20px 40px rgba(0, 0, 0, 0.3),
+    0 0 30px rgba(143, 30, 174, 0.3),
+    inset 0 1px 0 rgba(255, 255, 255, 0.1);
+  animation: aiPhoneGlow 3s ease-in-out infinite;
+}
+
+@keyframes aiPhoneGlow {
+  0%, 100% {
+    box-shadow: 
+      0 20px 40px rgba(0, 0, 0, 0.3),
+      0 0 20px rgba(143, 30, 174, 0.2),
+      inset 0 1px 0 rgba(255, 255, 255, 0.1);
+  }
+  50% {
+    box-shadow: 
+      0 20px 40px rgba(0, 0, 0, 0.3),
+      0 0 40px rgba(143, 30, 174, 0.4),
+      inset 0 1px 0 rgba(255, 255, 255, 0.1);
+  }
+}
+
+.ai-screenshot-item .screenshot-info h3 {
+  color: #8f1eae !important;
+}
+
+.ai-title-icon {
+  font-size: 1.2rem;
+}
+
+/* AI Stat Item */
+.ai-stat-item {
+  background: linear-gradient(135deg, rgba(143, 30, 174, 0.2), rgba(143, 30, 174, 0.05));
+  border: 2px solid rgba(143, 30, 174, 0.4);
+  padding: 15px 25px;
+  animation: aiStatGlow 2s ease-in-out infinite;
+}
+
+@keyframes aiStatGlow {
+  0%, 100% {
+    box-shadow: 0 0 15px rgba(143, 30, 174, 0.2);
+  }
+  50% {
+    box-shadow: 0 0 25px rgba(143, 30, 174, 0.4);
+  }
+}
+
+.ai-stat-item .stat-number {
+  font-size: 2rem !important;
+}
+
+.ai-stat-item .stat-label {
+  color: rgba(255, 255, 255, 0.8) !important;
+}
+
 .screenshots-content {
   display: grid;
   grid-template-columns: 1fr 1fr;

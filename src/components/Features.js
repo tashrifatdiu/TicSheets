@@ -11,6 +11,13 @@ const Features = () => {
 
   const features = [
     {
+      icon: '🤖',
+      title: 'AI Voice & Text Commands',
+      description: 'Revolutionary AI-powered task creation. Just speak or type naturally - TicSheets understands your commands and automatically creates tasks for you. No more manual input!',
+      details: ['Voice Command Recognition', 'Natural Language Processing', 'Auto Task Creation', 'Conversation Understanding'],
+      isAI: true
+    },
+    {
       icon: '⬛',
       title: 'Smart Task Management',
       description: 'Create tasks with intelligent time selection, categories, and status tracking. Support for general, timed start, and timed range tasks.',
@@ -33,12 +40,6 @@ const Features = () => {
       title: 'Link Management & Playlists',
       description: 'Organize links with custom groups, YouTube integration with timestamps, and embedded preview system.',
       details: ['Custom Groups', 'YouTube Integration', 'Embedded Previews', 'Playlist Curation']
-    },
-    {
-      icon: '◪',
-      title: 'Activity Tracking & Analytics',
-      description: 'Comprehensive analytics with completion rates, streaks, category performance, and productivity patterns.',
-      details: ['Completion Rates', 'Streak Tracking', 'Category Analytics', 'Productivity Patterns']
     },
     {
       icon: '⟐',
@@ -92,14 +93,15 @@ const Features = () => {
           {features.map((feature, index) => (
             <motion.div 
               key={index}
-              className="feature-card"
+              className={`feature-card ${feature.isAI ? 'ai-feature-card' : ''}`}
               variants={itemVariants}
               whileHover={{ 
                 scale: 1.02,
                 transition: { duration: 0.2 }
               }}
             >
-              <div className="feature-icon">
+              {feature.isAI && <div className="ai-badge-corner">NEW AI</div>}
+              <div className={`feature-icon ${feature.isAI ? 'ai-feature-icon' : ''}`}>
                 <span>{feature.icon}</span>
               </div>
               <div className="feature-content">

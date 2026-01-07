@@ -67,13 +67,27 @@ const Hero = () => {
           animate={inView ? "visible" : "hidden"}
         >
           <motion.div className="hero-announcement" variants={itemVariants}>
-            <div className="announcement-badge">
+            <div className="announcement-badge ai-badge">
+              <span className="announcement-icon">🤖</span>
+              <span className="announcement-text">NEW: AI Voice Task Creation</span>
+            </div>
+            <div className="announcement-badge wishlist-badge">
               <span className="announcement-icon">✦</span>
               <span className="announcement-text">Wishlist Now Open</span>
             </div>
             <div className="hero-badge">
               <span className="badge-text">Android Ready</span>
               <span className="badge-version">Build 28</span>
+            </div>
+          </motion.div>
+
+          <motion.div className="ai-highlight-banner" variants={itemVariants}>
+            <div className="ai-banner-content">
+              <span className="ai-icon">🎤</span>
+              <div className="ai-banner-text">
+                <span className="ai-title">AI-Powered Task Creation</span>
+                <span className="ai-subtitle">Just speak or type - AI adds tasks automatically</span>
+              </div>
             </div>
           </motion.div>
 
@@ -84,8 +98,9 @@ const Hero = () => {
 
           <motion.p className="hero-description" variants={itemVariants}>
             Experience the future of task management on Android with our Nothing OS inspired design. 
-            TicSheets combines intelligent notifications, offline-first architecture, 
-            and seamless synchronization in a beautifully minimalist interface.
+            <strong> Now featuring AI-powered voice and text commands</strong> - just speak or type naturally, 
+            and TicSheets automatically creates tasks for you. Combined with intelligent notifications, 
+            offline-first architecture, and seamless synchronization in a beautifully minimalist interface.
           </motion.p>
 
           <motion.div className="hero-stats" variants={itemVariants}>
@@ -123,6 +138,10 @@ const Hero = () => {
           </motion.div>
 
           <motion.div className="hero-features-preview" variants={itemVariants}>
+            <div className="feature-pill ai-pill">
+              <span className="feature-icon">🤖</span>
+              <span>AI Voice Commands</span>
+            </div>
             <div className="feature-pill">
               <span className="feature-icon">⬢</span>
               <span>Android Native</span>
@@ -134,10 +153,6 @@ const Hero = () => {
             <div className="feature-pill">
               <span className="feature-icon">◈</span>
               <span>Nothing OS Design</span>
-            </div>
-            <div className="feature-pill">
-              <span className="feature-icon">⚡</span>
-              <span>Lightning Fast</span>
             </div>
           </motion.div>
         </motion.div>

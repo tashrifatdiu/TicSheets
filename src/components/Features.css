@@ -121,6 +121,66 @@
   color: rgba(255, 255, 255, 0.8);
 }
 
+/* AI Feature Card Styles */
+.ai-feature-card {
+  background: linear-gradient(135deg, rgba(143, 30, 174, 0.15), rgba(143, 30, 174, 0.05)) !important;
+  border-color: rgba(143, 30, 174, 0.5) !important;
+  position: relative;
+  animation: aiCardGlow 3s ease-in-out infinite;
+}
+
+@keyframes aiCardGlow {
+  0%, 100% {
+    box-shadow: 0 0 20px rgba(143, 30, 174, 0.2), inset 0 0 20px rgba(143, 30, 174, 0.05);
+  }
+  50% {
+    box-shadow: 0 0 40px rgba(143, 30, 174, 0.4), inset 0 0 30px rgba(143, 30, 174, 0.1);
+  }
+}
+
+.ai-feature-card::before {
+  background: linear-gradient(90deg, #8f1eae, rgba(143, 30, 174, 0.5)) !important;
+  transform: translateX(0) !important;
+}
+
+.ai-badge-corner {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  background: linear-gradient(135deg, #8f1eae, rgba(143, 30, 174, 0.8));
+  color: #FFFFFF;
+  padding: 5px 12px;
+  font-size: 10px;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  animation: badgePulse 2s ease-in-out infinite;
+}
+
+@keyframes badgePulse {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.05); }
+}
+
+.ai-feature-icon {
+  background: linear-gradient(135deg, rgba(143, 30, 174, 0.3), rgba(143, 30, 174, 0.1)) !important;
+  border-color: rgba(143, 30, 174, 0.6) !important;
+  animation: aiIconPulse 2s ease-in-out infinite;
+}
+
+@keyframes aiIconPulse {
+  0%, 100% {
+    box-shadow: 0 0 15px rgba(143, 30, 174, 0.3);
+  }
+  50% {
+    box-shadow: 0 0 30px rgba(143, 30, 174, 0.5);
+  }
+}
+
+.ai-feature-icon span {
+  font-size: 28px !important;
+}
+
 .detail-bullet {
   color: #8f1eae;
   font-weight: bold;
